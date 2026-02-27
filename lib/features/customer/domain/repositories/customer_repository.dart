@@ -1,0 +1,9 @@
+import '../entities/customer.dart';
+
+abstract class CustomerRepository {
+  Future<List<Customer>> getCustomers();
+  Future<Customer> addCustomer(Customer customer);
+  Future<Customer> updateCustomer(Customer customer);
+  Future<void> deleteCustomer(int id);
+  Future<void> syncFromRemote();
+}
